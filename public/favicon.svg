@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e08b" />
+      <stop offset="40%" stop-color="#d4af37" />
+      <stop offset="70%" stop-color="#b38728" />
+      <stop offset="100%" stop-color="#8a6515" />
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#d1d5db" />
+      <stop offset="100%" stop-color="#8a929e" />
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181a1f" />
+      <stop offset="100%" stop-color="#0c0d0e" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Dark rounded container for favicon clarity -->
+  <rect width="120" height="120" rx="26" fill="url(#darkBg)" stroke="rgba(212, 175, 55, 0.4)" stroke-width="2.5"/>
+  
+  <g filter="url(#glow)" transform="translate(6, 4)">
+    <!-- Diagonal Filmstrip Leg of the 4 -->
+    <path d="M 44 14 L 62 14 L 20 96 L 2 96 Z" fill="url(#goldGrad)" />
+    
+    <!-- Filmstrip sprocket holes -->
+    <rect x="36" y="24" width="8" height="6" rx="1.5" fill="#0c0d0e" transform="rotate(-30 40 27)" />
+    <rect x="29" y="38" width="8" height="6" rx="1.5" fill="#0c0d0e" transform="rotate(-30 33 41)" />
+    <rect x="22" y="52" width="8" height="6" rx="1.5" fill="#0c0d0e" transform="rotate(-30 26 55)" />
+    <rect x="15" y="66" width="8" height="6" rx="1.5" fill="#0c0d0e" transform="rotate(-30 19 69)" />
+    <rect x="8" y="80" width="8" height="6" rx="1.5" fill="#0c0d0e" transform="rotate(-30 12 83)" />
+
+    <!-- Silver Horizontal/Diagonal Crossbar Triangle -->
+    <polygon points="56,22 84,72 32,72" fill="url(#silverGrad)" />
+    <polygon points="56,22 45,72 32,72" fill="#9ca3af" opacity="0.6" />
+
+    <!-- Golden Vertical Stem of 4 -->
+    <polygon points="62,48 76,48 76,96 62,96" fill="url(#goldGrad)" />
+    
+    <!-- Right Horizontal Extension Bar -->
+    <polygon points="32,64 88,64 88,76 32,76" fill="url(#goldGrad)" />
+    <polygon points="80,64 88,64 88,76 76,76" fill="#8a6515" />
+    
+    <!-- Gold Highlight Core -->
+    <polygon points="58,52 74,68 58,68" fill="url(#goldGrad)" />
+  </g>
+</svg>
