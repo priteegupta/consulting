@@ -82,7 +82,7 @@ export default function Header() {
             </nav>
 
             <div className="header-actions">
-              <Link to="/contact" className="btn btn-gold btn-sm">
+              <Link to="/contact" className="btn btn-gold btn-sm header-cta-btn">
                 START A PROJECT
               </Link>
               <button 

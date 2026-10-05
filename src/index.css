@@ -409,31 +409,61 @@ img, video {
     display: none;
   }
 
+  .header-actions {
+    gap: 0.65rem;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+    max-width: 175px;
+  }
+
   .mobile-menu-btn {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    background: rgba(212, 175, 55, 0.14);
+    border: 1px solid var(--border-gold);
+    color: var(--gold-light);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    flex-shrink: 0;
+    z-index: 1002;
+    transition: all var(--transition-fast);
+  }
+
+  .mobile-menu-btn:hover {
+    background: var(--gold-primary);
+    color: #0c0d0e;
+    border-color: var(--gold-light);
   }
 
   .mobile-nav-drawer {
-    display: block;
+    display: flex;
     position: fixed;
     top: var(--header-height);
     left: 0;
     right: 0;
     bottom: 0;
+    height: calc(100vh - var(--header-height));
     background-color: rgba(10, 11, 13, 0.98);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 999;
-    padding: 2.5rem 1.5rem;
+    padding: 2.25rem 1.5rem;
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
     border-bottom: 2px solid var(--border-gold);
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
   }
 
   .mobile-nav-drawer.is-open {
@@ -472,6 +502,33 @@ img, video {
     flex-direction: column;
     gap: 1rem;
     padding-top: 2rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .header-cta-btn {
+    display: none !important;
+  }
+
+  .site-header {
+    height: 72px;
+  }
+
+  .mobile-nav-drawer {
+    top: 72px;
+    height: calc(100vh - 72px);
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-logo-img {
+    height: 32px;
+    max-width: 145px;
+  }
+  
+  .site-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
