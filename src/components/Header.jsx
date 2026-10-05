@@ -27,6 +27,23 @@ export default function Header() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // Lock body scroll and listen for Escape key when mobile menu is active
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      const handleKeyDown = (e) => {
+        if (e.key === 'Escape') setMobileMenuOpen(false);
+      };
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = '';
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [mobileMenuOpen]);
+
   return (
     <>
       <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
